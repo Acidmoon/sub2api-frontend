@@ -4,6 +4,10 @@ This project is the official `sub2api/frontend` extracted into an independently 
 
 Upstream baseline: `Wei-Shaw/sub2api` frontend, extracted for standalone deployment.
 
+## API Contract
+
+The frontend-to-backend contract used for this extraction is documented in [docs/FRONTEND_BACKEND_API_CONTRACT.md](docs/FRONTEND_BACKEND_API_CONTRACT.md).
+
 ## What Changed From Official Frontend
 
 - `vite.config.ts` now builds to local `dist/` instead of `../backend/internal/web/dist`.
