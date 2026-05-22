@@ -1,0 +1,16 @@
+services:
+  sub2api-frontend:
+    build:
+      context: .
+      args:
+        VITE_API_BASE_URL: ${VITE_API_BASE_URL:-/api/v1}
+    image: sub2api-standalone-frontend:latest
+    container_name: sub2api-frontend
+    restart: unless-stopped
+    ports:
+      - "${FRONTEND_BIND_HOST:-0.0.0.0}:${FRONTEND_PORT:-8081}:80"
+    environment:
+      SUB2API_BACKEND: ${SUB2API_BACKEND:-http://host.docker.internal:8080}
+      CLIENT_MAX_BODY_SIZE: ${CLIENT_MAX_BODY_SIZE:-100m}
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
