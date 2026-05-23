@@ -35,7 +35,7 @@ pnpm install
 pnpm build
 ```
 
-The build output is `dist/`.
+The build output is `dist/`. This repository keeps `dist/` under version control because the deployment target is a lightweight server that should not run the Node/Vite frontend build.
 
 ## Docker Deployment
 
@@ -49,6 +49,7 @@ docker compose up -d --build
 Default behavior:
 
 - Frontend listens on host port `8081`.
+- The Docker image is Nginx-only and copies the committed `dist/` files.
 - Nginx proxies backend routes to `http://host.docker.internal:8080`.
 - Change `SUB2API_BACKEND` in `.env` if your backend is elsewhere.
 

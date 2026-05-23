@@ -1,7 +1,7 @@
 node_modules/
-dist/
 coverage/
 .dev/
+.playwright-cli/
 
 .env
 .env.local

@@ -46,8 +46,8 @@ onUnmounted(() => {
 <style scoped>
 /* 桌面端：Flexbox 布局 */
 .table-page-layout {
-  @apply flex flex-col gap-6;
-  height: calc(100vh - 64px - 4rem); /* 减去 header + lg:p-8 的上下padding */
+  @apply flex flex-col gap-4;
+  height: calc(100vh - 64px - 3rem); /* header + content padding */
 }
 
 .layout-section-fixed {
@@ -60,7 +60,11 @@ onUnmounted(() => {
 
 /* 表格滚动容器 - 增强版表体滚动方案 */
 .table-scroll-container {
-  @apply flex flex-col overflow-hidden h-full bg-white dark:bg-dark-800 rounded-2xl border border-gray-200 dark:border-dark-700 shadow-sm;
+  @apply flex h-full flex-col overflow-hidden;
+  background: var(--surface-base);
+  border: 1px solid var(--line-subtle);
+  border-radius: 8px;
+  box-shadow: var(--shadow-panel);
 }
 
 .table-scroll-container :deep(.table-wrapper) {
@@ -76,7 +80,7 @@ onUnmounted(() => {
 }
 
 .table-scroll-container :deep(thead) {
-  @apply bg-gray-50/80 dark:bg-dark-800/80 backdrop-blur-sm;
+  background: var(--surface-muted);
 }
 
 .table-scroll-container :deep(tbody) {
@@ -84,11 +88,15 @@ onUnmounted(() => {
 }
 
 .table-scroll-container :deep(th) {
-  @apply px-5 py-4 text-left text-sm font-medium text-gray-600 dark:text-dark-300 border-b border-gray-200 dark:border-dark-700;
+  @apply px-4 py-3 text-left text-xs font-semibold;
+  color: var(--text-muted);
+  border-bottom: 1px solid var(--line-subtle);
 }
 
 .table-scroll-container :deep(td) {
-  @apply px-5 py-4 text-sm text-gray-700 dark:text-gray-300 border-b border-gray-100 dark:border-dark-800;
+  @apply px-4 py-3 text-sm;
+  color: var(--text-main);
+  border-bottom: 1px solid color-mix(in srgb, var(--line-subtle) 70%, transparent);
 }
 
 /* 移动端：恢复正常滚动 */

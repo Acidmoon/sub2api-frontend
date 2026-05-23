@@ -50,27 +50,25 @@ export default {
       },
       fontFamily: {
         sans: [
-          'system-ui',
+          'Fira Sans',
           '-apple-system',
           'BlinkMacSystemFont',
           'Segoe UI',
-          'Roboto',
-          'Helvetica Neue',
-          'Arial',
           'PingFang SC',
           'Hiragino Sans GB',
           'Microsoft YaHei',
           'sans-serif'
         ],
-        mono: ['ui-monospace', 'SFMono-Regular', 'Menlo', 'Monaco', 'Consolas', 'monospace']
+        mono: ['Fira Code', 'ui-monospace', 'SFMono-Regular', 'Menlo', 'Monaco', 'Consolas', 'monospace']
       },
       boxShadow: {
-        glass: '0 8px 32px rgba(0, 0, 0, 0.08)',
-        'glass-sm': '0 4px 16px rgba(0, 0, 0, 0.06)',
-        glow: '0 0 20px rgba(20, 184, 166, 0.25)',
-        'glow-lg': '0 0 40px rgba(20, 184, 166, 0.35)',
-        card: '0 1px 3px rgba(0, 0, 0, 0.04), 0 1px 2px rgba(0, 0, 0, 0.06)',
-        'card-hover': '0 10px 40px rgba(0, 0, 0, 0.08)',
+        glass: '0 1px 2px rgba(15, 23, 42, 0.04)',
+        'glass-sm': '0 1px 2px rgba(15, 23, 42, 0.04)',
+        glow: '0 1px 2px rgba(13, 148, 136, 0.18)',
+        'glow-lg': '0 8px 18px rgba(13, 148, 136, 0.16)',
+        card: '0 1px 2px rgba(15, 23, 42, 0.04)',
+        'card-hover': '0 1px 2px rgba(15, 23, 42, 0.04)',
+        panel: '0 1px 2px rgba(15, 23, 42, 0.04)',
         'inner-glow': 'inset 0 1px 0 rgba(255, 255, 255, 0.1)'
       },
       backgroundImage: {
